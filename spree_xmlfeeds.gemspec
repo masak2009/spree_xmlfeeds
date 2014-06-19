@@ -7,9 +7,10 @@ Gem::Specification.new do |s|
   s.description = 'XML FEED Generator'
   s.required_ruby_version = '>= 1.8.7'
 
-  # s.author    = 'Martin Rychlovsky'
+  s.author    = 'Martin Rychlovsky'
+  s.authors = [ 'Martin Rychlovsky' ]
   # s.email     = 'masak@gravastar.cz'
-  # s.homepage  = 'http://www.gravastar.cz'
+  s.homepage  = 'http://www.gravastar.cz'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
