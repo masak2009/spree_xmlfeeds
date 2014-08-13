@@ -1,0 +1,9 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+cs:
+  manufacturer_xml: "XML Výrobce"
+  zbozicz_max_cpc: "XML ZBOZI.CZ CPC"
+  zbozicz_product_name: "XML ZBOZI.CZ Název"
+  zbozicz_free_delivery: "XML ZBOZI.CZ Doprava zdarma"
+  zbozicz_taxon_id: "XML ZBOZI.CZ Kategorie"
