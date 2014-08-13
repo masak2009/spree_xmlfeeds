@@ -1,0 +1,29 @@
+<!--ZBOZI CZ FORM-->
+      <%= f.field_container :manufacturer do %>
+      <%= f.label :manufacturer, t(:manufacturer_xml) %>
+      <%= f.error_message_on :manufacturer %>
+      <%= f.text_field :manufacturer, :value => @product.manufacturer%>
+    <% end %>
+
+    <%= f.field_container :zbozicz_max_cpc do %>
+      <%= f.label :zbozicz_max_cpc, t(:zbozicz_max_cpc) %>
+      <%= f.error_message_on :zbozicz_max_cpc %>
+      <%= f.text_field :zbozicz_max_cpc, :value => @product.zbozicz_max_cpc%>
+    <% end %>
+    <%= f.field_container :zbozicz_product_name do %>
+      <%= f.label :zbozicz_product_name, t(:zbozicz_product_name) %>
+      <%= f.error_message_on :zbozicz_product_name %>
+      <%= f.text_field :zbozicz_product_name, :value => @product.zbozicz_product_name%>
+    <% end %>
+    <%= f.field_container :zbozicz_free_delivery do %>
+      <%= f.check_box :zbozicz_free_delivery,:style=>"width:auto;" %>
+      <%= f.label :zbozicz_free_delivery, t(:zbozicz_free_delivery) %>
+      <%= f.error_message_on :zbozicz_free_delivery %>
+    <% end %>
+    <%= f.field_container :zbozicz_taxon_id do %>
+      <%= f.label :zbozicz_taxon_id, t(:zbozicz_taxon_id) %>
+      <%= f.error_message_on :zbozicz_taxon_id %>
+      <%#= f.text_field :zbozicz_taxon_id, :value => @product.zbozicz_taxon_id%>
+      <%= f.select(:zbozicz_taxon_id, @product.taxons.collect {|taxon| [(taxon.ancestors.reverse.collect { |ancestor| ancestor.name }.join( " >> ").blank?)? taxon.name : taxon.ancestors.reverse.collect { |ancestor| ancestor.name }.join( " >> "),taxon.id]}, {:include_blank => true}, {:class => 'select2'}) %>
+    <% end %>
+<!--ZBOZI CZ FORM-->
