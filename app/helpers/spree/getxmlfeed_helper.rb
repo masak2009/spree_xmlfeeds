@@ -1,4 +1,4 @@
-module GetxmlfeedHelper
+module Spree::GetxmlfeedHelper
 
   def round_price(product)
     (product.price / (1 + Spree::Config[:czech_vat])).round(2)

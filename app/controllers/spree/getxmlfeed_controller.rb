@@ -1,4 +1,5 @@
-class GetxmlfeedController < ApplicationController
+module Spree
+class GetxmlfeedController < Spree::BaseController
 
   #get XML feed for zbozi.cz
   #require gem "builder" for working
@@ -55,4 +56,5 @@ class GetxmlfeedController < ApplicationController
       format.xml # index.xml.builder
     end
   end
+end
 end
