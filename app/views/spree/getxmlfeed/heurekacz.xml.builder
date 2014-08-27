@@ -22,8 +22,11 @@ xml.SHOP do
       
       #xml.AVAILABILITY 0
       xml.MANUFACTURER product.manufacturer
-      xml.CATEGORYTEXT breadcrumbs_xml(Spree::Taxon.find_by_id(product.zbozicz_taxon_id)) if product.zbozicz_taxon_id
-
+      if product.heurekacz_custom_taxon.present?
+        xml.CATEGORYTEXT product.heurekacz_custom_taxon
+      else
+        xml.CATEGORYTEXT breadcrumbs_xml(Spree::Taxon.find_by_id(product.zbozicz_taxon_id)) if product.zbozicz_taxon_id
+      end
       if Spree::Image.find_by_viewable_id(product.master.id)
         xml.IMGURL "http://" + request.env["HTTP_HOST"] + "/spree/products/"+ Spree::Image.find_by_viewable_id(product.master.id).id.to_s + "/product/" + Spree::Image.find_by_viewable_id(product.master.id).attachment_file_name
       else

@@ -31,4 +31,10 @@
       <%#= f.text_field :zbozicz_taxon_id, :value => @product.zbozicz_taxon_id%>
       <%= f.select(:zbozicz_taxon_id, @product.taxons.collect {|taxon| [(taxon.ancestors.reverse.collect { |ancestor| ancestor.name }.join( " >> ").blank?)? taxon.name : taxon.ancestors.reverse.collect { |ancestor| ancestor.name }.join( " >> "),taxon.id]}, {:include_blank => true}, {:class => 'select2'}) %>
     <% end %>
+    <%= f.field_container :heurekacz_custom_taxon do %>
+      <%= f.label :heurekacz_custom_taxon, t(:heurekacz_custom_taxon) %>
+      <span style="font-size: 80%;"><%= t("heurekacz_custom_taxon_help")%></span>
+      <%= f.error_message_on :heurekacz_custom_taxon %>
+      <%= f.text_field :heurekacz_custom_taxon, :value => @product.heurekacz_custom_taxon%>
+    <% end %>
 <!--ZBOZI CZ FORM-->
