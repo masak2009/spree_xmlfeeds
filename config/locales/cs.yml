@@ -11,3 +11,4 @@ cs:
   heurekacz_taxon_id: "XML HEUREKA.CZ &"
   heurekacz_custom_taxon: "XML HEUREKA.CZ vlastní kategorie"
   heurekacz_custom_taxon_help: "Přetíží v XML feedu kategorii, která se bere z našeho obchodu, kategorii kterou zadáte z heureka.cz webu."
+  ean: "EAN"

@@ -7,4 +7,5 @@ attr_accessible :zbozicz_free_delivery if Spree::Product.table_exists? && Spree:
 attr_accessible :zbozicz_taxon_id if Spree::Product.table_exists? && Spree::Product.column_names.include?('zbozicz_taxon_id')
 attr_accessible :heurekacz_max_cpc if Spree::Product.table_exists? && Spree::Product.column_names.include?('heurekacz_max_cpc')
 attr_accessible :heurekacz_custom_taxon if Spree::Product.table_exists? && Spree::Product.column_names.include?('heurekacz_custom_taxon')
+attr_accessible :ean if Spree::Product.table_exists? && Spree::Product.column_names.include?('ean')
 end

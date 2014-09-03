@@ -39,6 +39,7 @@ xml.SHOP do
       if product.zbozicz_free_delivery == 1
         xml.EXTRA_MESSAGE "free_delivery"
       end
+      xml.EAN product.ean
     end
   end
 end

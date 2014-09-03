@@ -36,13 +36,14 @@ xml.SHOP do
       vat_and_price = Spree::TaxRate.return_vat_and_price_without_vat(product.price)
 
       xml.PRICE_VAT vat_and_price[0]+vat_and_price[1]
-      if product.zbozicz_max_cpc.present?
+      if product.heurekacz_max_cpc.present?
         xml.HEUREKA_CPC product.heurekacz_max_cpc
       else
         #xml.HEUREKA_CPC 1          
       end
 
-      xml.DELIVERY_DATE 0      
+      xml.DELIVERY_DATE 0
+      xml.EAN product.ean      
     end
   end
 end

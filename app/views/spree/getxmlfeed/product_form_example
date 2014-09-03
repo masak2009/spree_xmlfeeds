@@ -1,4 +1,9 @@
 <!--ZBOZI CZ FORM-->
+      <%= f.field_container :ean do %>
+        <%= f.label :ean, t(:ean) %>
+        <%= f.text_field :ean, :size => 16 %>
+      <% end %>
+
       <%= f.field_container :manufacturer do %>
       <%= f.label :manufacturer, t(:manufacturer_xml) %>
       <%= f.error_message_on :manufacturer %>
