@@ -35,6 +35,7 @@ xml.SHOP do
       else
         xml.MAX_CPC 1          
       end
+      xml.MAX_CPC_SEARCH product.zbozicz_search_cpc         
       xml.FIRMY_CZ 0
       if product.zbozicz_free_delivery == 1
         xml.EXTRA_MESSAGE "free_delivery"

@@ -15,6 +15,11 @@
       <%= f.error_message_on :zbozicz_max_cpc %>
       <%= f.text_field :zbozicz_max_cpc, :value => @product.zbozicz_max_cpc%>
     <% end %>
+    <%= f.field_container :zbozicz_search_cpc do %>
+      <%= f.label :zbozicz_search_cpc, t(:zbozicz_search_cpc) %>
+      <%= f.error_message_on :zbozicz_search_cpc %>
+      <%= f.text_field :zbozicz_search_cpc, :value => @product.zbozicz_search_cpc%>
+    <% end %>
     <%= f.field_container :heurekacz_max_cpc do %>
       <%= f.label :heurekacz_max_cpc, t(:heurekacz_max_cpc) %>
       <%= f.error_message_on :heurekacz_max_cpc %>
